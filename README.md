@@ -1,3 +1,5 @@
+Just Checking That Updates Work
+
 <h1>My Name: Kaitlyn Fernelius</h1>
 
 <h2>Example of code</h2>
