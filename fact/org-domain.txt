@@ -1,0 +1,3 @@
+search.robotnik.example.org
+dns.knuckles.example.org
+emerald.ring.example.org
