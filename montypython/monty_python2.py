@@ -12,13 +12,23 @@ def guessinit(guessWord, guessPhrase):
             print("This is your last chance")
 
         usrGuess = input(f"Enter the last Word of the title '{guessPhrase}' : ")
+        
+        #Checking input for game play
         if usrGuess.lower() == guessWord.lower():
             print(f"Correct the movie title is: '{guessPhrase} {guessWord}'")
             break
+        elif usrGuess.lower() == "shrubbery":
+            print(f"You gave the super secret answer, you win forever!!")
+            break
         else:
             left = 3 - (userAttempts + 1)
-            print(f"Incorrect you have {left} more chances")
-            userAttempts+=1
+            if left == 0: 
+                print("YOUR MOTHER WAS A HAMSTER AND YOUR FATHER SMELLS OF ELDERBERRIES")
+                print("GOOD DAY SIR!")
+                break
+            else:
+                print(f"Incorrect you have {left} more chances")
+                userAttempts+=1
 
 #Phrase Generator for the game
 def generatePhrase(): 
@@ -27,6 +37,7 @@ def generatePhrase():
     #Item returned from the random choice
     movie = random.choice(montyPythonMovies)
     return movie
+
 
 def runGame():
     userRes = input("Would you like to start a game? y/n: ")
@@ -55,5 +66,6 @@ def main():
 
     print("Thanks for playing")
 
-main()
+if __name__ == "__main__":
+    main()
 
