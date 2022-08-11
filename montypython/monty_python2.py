@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import random
+import os 
 
 #Game function
 def guessinit(guessWord, guessPhrase):
@@ -39,6 +40,7 @@ def main():
     playAgain = runGame()
    
     while playAgain:
+        os.system("clear")
         #Generate Random choice from the list of movies
         movie = generatePhrase()
    
