@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-from art import *
-from PIL import Image
 import os
+from art import *
 from travelAnimation import load_animation
 
 #Game starts - describes character
@@ -11,12 +10,14 @@ from travelAnimation import load_animation
 #Each LOCATION: has certain objectives (that allow the story to progress)
 #Hero has items that they must obtain, if item == true then they can do a certain action
 
-
+"""
+Main Function Entry point
+"""
 def main():
 
-    #TODO - add the map print image somewhere within the view code
-    # with Image.open('PythonPeasantQuest\images\peasantmap.png') as img:
-    #     img.show()
+
+
+
 
     tprint("Welcome to PeasCant Quest", font="epic",chr_ignore=True)
     print("GENERAL INSTRUCTIONS\n")
@@ -45,11 +46,9 @@ def main():
         "has burninated your thatched roof cottage along with all your goods and services.\n" +
         "With nothing left to lose, you swear to get revenge on that Wingaling Dragon in the name of burninated peasants everywhere.\n" +
         "You head east towards the mountain atop which NOTTrogdor lives.")
-        mv = input("Press ENTER to Continue\n")
-        if(mv.lower() != "q"):
+        cont  = input("Press ENTER to Continue\n")
+        if cont.lower() != "q":
             load_animation("Traveling to your peasantly destination.....")
-    #TODO - Create a scene change function that shows animation for scene change
-    #TODO - Figure out if theres a way to clear the command line
-    #TODO - Create different Scenes with objectives. The player will have scene objectives listed in his class and the scene will search for it's objective to determine if the scene is complete
+
 
 main()
