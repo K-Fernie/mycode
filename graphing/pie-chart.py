@@ -21,7 +21,8 @@ def main():
         shadow=True, startangle=90)
     ax1.axis('equal')
 
-    plt.savefig("/home/student/mycode/graphing/schrute4Ever.pdf")
+    plt.savefig("/home/student/mycode/graphing/schrute4Ever.png")
+    plt.savefig("/home/student/static/schrute4Ever.png")
     # save a copy to "~/static" (the "files" view)
     print("Your beet farm is ready!")
 
